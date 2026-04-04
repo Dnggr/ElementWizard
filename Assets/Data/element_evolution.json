@@ -1,0 +1,206 @@
+{
+  "base_powers": [
+    { "id": "fire",      "name": "Fire",      "emoji": "🔥", "desc": "Raw burning heat" },
+    { "id": "water",     "name": "Water",     "emoji": "💧", "desc": "Fluid force" },
+    { "id": "air",       "name": "Air",       "emoji": "🌬️", "desc": "Wind & breath" },
+    { "id": "earth",     "name": "Earth",     "emoji": "🪨", "desc": "Stone & soil" },
+    { "id": "lightning", "name": "Lightning", "emoji": "⚡", "desc": "Electric surge" },
+    { "id": "ice",       "name": "Ice",       "emoji": "❄️", "desc": "Freezing cold" },
+    { "id": "shadow",    "name": "Shadow",    "emoji": "🌑", "desc": "Darkness & void" },
+    { "id": "light",     "name": "Light",     "emoji": "☀️", "desc": "Radiant energy" },
+    { "id": "metal",     "name": "Metal",     "emoji": "⚙️", "desc": "Iron & steel" },
+    { "id": "nature",    "name": "Nature",    "emoji": "🌿", "desc": "Life & growth" }
+  ],
+
+  "level2_powers": [
+    { "id": "magma",     "name": "Magma",     "emoji": "🌋", "recipe": ["fire", "earth"],      "formula": "base(fire) + earth = Magma" },
+    { "id": "storm",     "name": "Storm",     "emoji": "⛈️", "recipe": ["lightning", "air"],   "formula": "base(lightning) + air = Storm" },
+    { "id": "blizzard",  "name": "Blizzard",  "emoji": "🌨️", "recipe": ["ice", "air"],         "formula": "base(ice) + air = Blizzard" },
+    { "id": "quake",     "name": "Quake",     "emoji": "💥", "recipe": ["earth", "lightning"], "formula": "base(earth) + lightning = Quake" },
+    { "id": "void",      "name": "Void",      "emoji": "🌀", "recipe": ["shadow", "air"],      "formula": "base(shadow) + air = Void" },
+    { "id": "radiance",  "name": "Radiance",  "emoji": "✨", "recipe": ["light", "fire"],      "formula": "base(light) + fire = Radiance" },
+    { "id": "plague",    "name": "Plague",    "emoji": "☠️", "recipe": ["nature", "shadow"],   "formula": "base(nature) + shadow = Plague" },
+    { "id": "forge",     "name": "Forge",     "emoji": "🔨", "recipe": ["metal", "fire"],      "formula": "base(metal) + fire = Forge" },
+    { "id": "tempest",   "name": "Tempest",   "emoji": "🌊", "recipe": ["water", "air"],       "formula": "base(water) + air = Tempest" },
+    { "id": "obsidian",  "name": "Obsidian",  "emoji": "🖤", "recipe": ["earth", "shadow"],    "formula": "base(earth) + shadow = Obsidian" }
+  ],
+
+  "level3_powers": [
+    { "id": "inferno",     "name": "Inferno",     "emoji": "🔥", "recipe": ["magma", "fire"],        "formula": "magma + base(fire) = Inferno" },
+    { "id": "apocalypse",  "name": "Apocalypse",  "emoji": "💀", "recipe": ["storm", "lightning"],   "formula": "storm + base(lightning) = Apocalypse" },
+    { "id": "frostfire",   "name": "Frostfire",   "emoji": "🧊", "recipe": ["blizzard", "fire"],     "formula": "blizzard + base(fire) = Frostfire" },
+    { "id": "terraformer", "name": "Terraformer", "emoji": "🌍", "recipe": ["quake", "earth"],       "formula": "quake + base(earth) = Terraformer" },
+    { "id": "eclipse",     "name": "Eclipse",     "emoji": "🌑", "recipe": ["void", "shadow"],       "formula": "void + base(shadow) = Eclipse" },
+    { "id": "divinity",    "name": "Divinity",    "emoji": "👁️", "recipe": ["radiance", "light"],    "formula": "radiance + base(light) = Divinity" },
+    { "id": "corruption",  "name": "Corruption",  "emoji": "🦠", "recipe": ["plague", "shadow"],     "formula": "plague + base(shadow) = Corruption" },
+    { "id": "dragonforge", "name": "Dragonforge", "emoji": "🐉", "recipe": ["forge", "fire"],        "formula": "forge + base(fire) = Dragonforge" },
+    { "id": "maelstrom",   "name": "Maelstrom",   "emoji": "🌪️", "recipe": ["tempest", "water"],     "formula": "tempest + base(water) = Maelstrom" },
+    { "id": "voidstorm",   "name": "Voidstorm",   "emoji": "⚫", "recipe": ["obsidian", "lightning"], "formula": "obsidian + base(lightning) = Voidstorm" }
+  ],
+
+  "ultimates": [
+    {
+      "id": "eternal_flame",
+      "name": "Eternal Flame",
+      "emoji": "🔱",
+      "base_element": "fire",
+      "evolution_chain": ["fire", "magma", "inferno", "eternal_flame"],
+      "recipe": ["inferno", "fire"],
+      "formula": "inferno + base(fire) = Eternal Flame",
+      "all_paths": [
+        { "path": ["fire", "fire", "fire"],    "desc": "base(fire) + fire + fire" },
+        { "path": ["fire", "earth", "fire"],   "desc": "base(fire) + earth + fire" },
+        { "path": ["fire", "water", "fire"],   "desc": "base(fire) + water + fire" },
+        { "path": ["fire", "air", "fire"],     "desc": "base(fire) + air + fire" }
+      ]
+    },
+    {
+      "id": "primordial_tide",
+      "name": "Primordial Tide",
+      "emoji": "🔱",
+      "base_element": "water",
+      "evolution_chain": ["water", "tempest", "maelstrom", "primordial_tide"],
+      "recipe": ["maelstrom", "water"],
+      "formula": "maelstrom + base(water) = Primordial Tide",
+      "all_paths": [
+        { "path": ["water", "water", "water"], "desc": "base(water) + water + water" },
+        { "path": ["water", "air", "water"],   "desc": "base(water) + air + water" },
+        { "path": ["water", "ice", "water"],   "desc": "base(water) + ice + water" },
+        { "path": ["water", "earth", "water"], "desc": "base(water) + earth + water" }
+      ]
+    },
+    {
+      "id": "eye_of_the_tempest",
+      "name": "Eye of the Tempest",
+      "emoji": "🔱",
+      "base_element": "air",
+      "evolution_chain": ["lightning", "storm", "apocalypse", "eye_of_the_tempest"],
+      "recipe": ["apocalypse", "air"],
+      "formula": "apocalypse + base(air) = Eye of the Tempest",
+      "all_paths": [
+        { "path": ["lightning", "lightning", "lightning"], "desc": "base(lightning) + lightning + lightning" },
+        { "path": ["lightning", "air", "lightning"],       "desc": "base(lightning) + air + lightning" },
+        { "path": ["lightning", "water", "lightning"],     "desc": "base(lightning) + water + lightning" },
+        { "path": ["lightning", "earth", "lightning"],     "desc": "base(lightning) + earth + lightning" }
+      ]
+    },
+    {
+      "id": "world_ender",
+      "name": "World Ender",
+      "emoji": "🔱",
+      "base_element": "earth",
+      "evolution_chain": ["earth", "quake", "terraformer", "world_ender"],
+      "recipe": ["terraformer", "earth"],
+      "formula": "terraformer + base(earth) = World Ender",
+      "all_paths": [
+        { "path": ["earth", "earth", "earth"],     "desc": "base(earth) + earth + earth" },
+        { "path": ["earth", "lightning", "earth"], "desc": "base(earth) + lightning + earth" },
+        { "path": ["earth", "fire", "earth"],      "desc": "base(earth) + fire + earth" },
+        { "path": ["earth", "water", "earth"],     "desc": "base(earth) + water + earth" }
+      ]
+    },
+    {
+      "id": "god_strike",
+      "name": "God Strike",
+      "emoji": "🔱",
+      "base_element": "lightning",
+      "evolution_chain": ["lightning", "storm", "apocalypse", "god_strike"],
+      "recipe": ["apocalypse", "lightning"],
+      "formula": "apocalypse + base(lightning) = God Strike",
+      "all_paths": [
+        { "path": ["lightning", "lightning", "lightning"], "desc": "base(lightning) + lightning + lightning" },
+        { "path": ["lightning", "air", "lightning"],       "desc": "base(lightning) + air + lightning" },
+        { "path": ["lightning", "fire", "lightning"],      "desc": "base(lightning) + fire + lightning" },
+        { "path": ["lightning", "water", "lightning"],     "desc": "base(lightning) + water + lightning" }
+      ]
+    },
+    {
+      "id": "absolute_zero",
+      "name": "Absolute Zero",
+      "emoji": "🔱",
+      "base_element": "ice",
+      "evolution_chain": ["ice", "blizzard", "frostfire", "absolute_zero"],
+      "recipe": ["frostfire", "ice"],
+      "formula": "frostfire + base(ice) = Absolute Zero",
+      "all_paths": [
+        { "path": ["ice", "ice", "ice"],   "desc": "base(ice) + ice + ice" },
+        { "path": ["ice", "air", "ice"],   "desc": "base(ice) + air + ice" },
+        { "path": ["ice", "fire", "ice"],  "desc": "base(ice) + fire + ice" },
+        { "path": ["ice", "water", "ice"], "desc": "base(ice) + water + ice" }
+      ]
+    },
+    {
+      "id": "death_singularity",
+      "name": "Death Singularity",
+      "emoji": "🔱",
+      "base_element": "shadow",
+      "evolution_chain": ["shadow", "void", "eclipse", "death_singularity"],
+      "recipe": ["eclipse", "shadow"],
+      "formula": "eclipse + base(shadow) = Death Singularity",
+      "all_paths": [
+        { "path": ["shadow", "shadow", "shadow"], "desc": "base(shadow) + shadow + shadow" },
+        { "path": ["shadow", "air", "shadow"],    "desc": "base(shadow) + air + shadow" },
+        { "path": ["shadow", "earth", "shadow"],  "desc": "base(shadow) + earth + shadow" },
+        { "path": ["shadow", "light", "shadow"],  "desc": "base(shadow) + light + shadow" }
+      ]
+    },
+    {
+      "id": "divine_judgment",
+      "name": "Divine Judgment",
+      "emoji": "🔱",
+      "base_element": "light",
+      "evolution_chain": ["light", "radiance", "divinity", "divine_judgment"],
+      "recipe": ["divinity", "light"],
+      "formula": "divinity + base(light) = Divine Judgment",
+      "all_paths": [
+        { "path": ["light", "light", "light"], "desc": "base(light) + light + light" },
+        { "path": ["light", "fire", "light"],  "desc": "base(light) + fire + light" },
+        { "path": ["light", "water", "light"], "desc": "base(light) + water + light" },
+        { "path": ["light", "air", "light"],   "desc": "base(light) + air + light" }
+      ]
+    },
+    {
+      "id": "dragonheart_omega",
+      "name": "Dragonheart Omega",
+      "emoji": "🔱",
+      "base_element": "metal",
+      "evolution_chain": ["metal", "forge", "dragonforge", "dragonheart_omega"],
+      "recipe": ["dragonforge", "metal"],
+      "formula": "dragonforge + base(metal) = Dragonheart Omega",
+      "all_paths": [
+        { "path": ["metal", "metal", "metal"],     "desc": "base(metal) + metal + metal" },
+        { "path": ["metal", "fire", "metal"],      "desc": "base(metal) + fire + metal" },
+        { "path": ["metal", "earth", "metal"],     "desc": "base(metal) + earth + metal" },
+        { "path": ["metal", "lightning", "metal"], "desc": "base(metal) + lightning + metal" }
+      ]
+    },
+    {
+      "id": "overgrowth_eternal",
+      "name": "Overgrowth Eternal",
+      "emoji": "🔱",
+      "base_element": "nature",
+      "evolution_chain": ["nature", "plague", "corruption", "overgrowth_eternal"],
+      "recipe": ["corruption", "nature"],
+      "formula": "corruption + base(nature) = Overgrowth Eternal",
+      "all_paths": [
+        { "path": ["nature", "nature", "nature"], "desc": "base(nature) + nature + nature" },
+        { "path": ["nature", "shadow", "nature"], "desc": "base(nature) + shadow + nature" },
+        { "path": ["nature", "water", "nature"],  "desc": "base(nature) + water + nature" },
+        { "path": ["nature", "earth", "nature"],  "desc": "base(nature) + earth + nature" }
+      ]
+    }
+  ],
+
+  "mechanic_rules": {
+    "base_plus_base": "base(X) + Y = Level 2 power",
+    "l2_plus_base":   "Level2 + base(Z) = Level 3 power",
+    "l3_plus_base":   "Level3 + base(W) = Ultimate",
+    "path_format":    "base(X) + Y + Z → Ultimate",
+    "notes": [
+      "The first element chosen becomes the 'base' and determines the evolution chain",
+      "The mixed elements (Y, Z) can vary — multiple combinations reach the same ultimate",
+      "Each base element has exactly one ultimate it can evolve into",
+      "The ultimate is always unlocked by pairing the Lv3 with the original base element"
+    ]
+  }
+}
