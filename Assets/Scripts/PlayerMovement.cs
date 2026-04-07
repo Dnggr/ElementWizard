@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem; // This is for the new Input System, but we won't use it in this example
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     // This is a VARIABLE — it stores a value we can change
     // "public" means we can see and edit it in Unity's Inspector
@@ -23,12 +24,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // Input.GetAxisRaw reads keyboard input
         // "Horizontal" = A/D keys or Left/Right arrows  (-1, 0, or 1)
         // "Vertical"   = W/S keys or Up/Down arrows     (-1, 0, or 1)
-        float moveX = Input.GetAxisRaw("Horizontal");   
+        float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        // Vector2 is just an (X, Y) direction
+
+       // Vector2 is just an (X, Y) direction
         // We multiply by moveSpeed so it moves faster or slower
         Vector2 movement = new Vector2(moveX, moveY) * moveSpeed;
+
 
         // We set the rigidbody's velocity instead of moving the Transform directly
         // This works with physics properly
