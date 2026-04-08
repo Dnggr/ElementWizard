@@ -61,7 +61,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Cores\BackgroundScroller.cs" />
+    <Compile Include="Assets\Scripts\Core\CameraSetup.cs" />
+    <Compile Include="Assets\Scripts\Core\InfiniteBackground.cs" />
+    <Compile Include="Assets\Scripts\Core\BackgroundScroller.cs" />
+    <Compile Include="Assets\Scripts\Core\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
